@@ -42,5 +42,24 @@ router.get('/:tasteType', async (req,res)=>{
         response.status(400).json({error:'Internal server error'})
     }
 })
+
+// router.put('/:id',async (req,res)=>{
+//   try {
+//     const menuId =req.params.id;
+//     const updateMenuId = req.body;
+//     const response = await MenuItem(menuId, updateMenuId,{
+// new:true,
+// runValidator:true
+//     })
+//     if(!response){
+//       return res.status(404).json({error:'menu not found'})
+//     }
+//     console.log("data updated")
+//     res.status(200).json(response)
+//   } catch (error) {
+//     console.log("error")
+//     res.status(400).json({error:'Internal server error'})
+//   }
+// })
   module.exports = router
   
